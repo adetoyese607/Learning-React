@@ -1,8 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
-import ClickCounterTwo from './components/ClickCounterTwo';
-import CounterTwo from './components/CounterTwo';
-import HoverCounterTwo from './components/HoverCounterTwo';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
+// import ClickCounterTwo from './components/ClickCounterTwo';
+// import CounterTwo from './components/CounterTwo';
+// import HoverCounterTwo from './components/HoverCounterTwo';
 // import User from './components/User';
 // import ClickCounter from './components/ClickCounter';
 // import HoverCounter from './components/HoverCounter';
@@ -36,20 +38,23 @@ import HoverCounterTwo from './components/HoverCounterTwo';
 function App() {
   return (
     <div className="App">
-     <CounterTwo>
+      <UserProvider value="Samson" >
+      <ComponentC />
+      </UserProvider>
+     {/* <CounterTwo>
     {(count, incrementCount) => (
     <ClickCounterTwo 
      count={count} incrementCount = {incrementCount}/>  
       )}
-      {/* Way Two */}
+      Way Two
      </CounterTwo>
      <CounterTwo>
     {(count, incrementCount) => (
     <HoverCounterTwo 
      count={count} incrementCount = {incrementCount}/>  
       )}
-      {/* Way Two */}
-     </CounterTwo>
+      Way Two
+     </CounterTwo> */}
    
        {/* <CounterTwo render = {(count, incrementCount) => (
     <HoverCounterTwo 
