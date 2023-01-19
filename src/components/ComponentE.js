@@ -5,6 +5,7 @@ import UserContext from './userContext'
 export class ComponentE extends Component {
     static contextType = UserContext
  
+    
   render() {
     return (
         <div>
